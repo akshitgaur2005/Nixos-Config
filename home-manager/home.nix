@@ -51,7 +51,11 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    userName = "akshitgaur2005";
+    userEmail = "akshitgaur@proton.me";
+  };
   
   programs.zsh = {
     enable = true;
