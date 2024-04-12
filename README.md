@@ -1,6 +1,8 @@
 # My NixOS Configuration
 
 **DO NOT USE IT AS IT IS!**
+
+
 You should change the username, packages and most importantly **hardware-configuration.nix**.
 
 
