@@ -93,6 +93,7 @@
       "$mod, space, togglefloating"
       "$mod, P, pseudo"
       "$mod, J, togglesplit"
+      "$mod, V, fullscreen"
       "$mod, left, movefocus, l"
       "$mod, right, movefocus, r"
       "$mod, up, movefocus, u"

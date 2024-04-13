@@ -10,5 +10,6 @@
     pamixer
     nerdfonts
     tree
+    discord
   ];
 }
