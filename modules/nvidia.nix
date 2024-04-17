@@ -1,22 +1,28 @@
 { config, lib, pkgs, ... }:
+let
+  driverPkg = config.boot.kernelPackages.nvidiaPackages.stable;
+in
 {
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
+    package = driverPkg;
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = false;
+    powerManagement.enable = true;
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.production;
+    package = driverPkg;
   };
+
+  nixpkgs.config.nvidia.acceptLicense = true;
 
   hardware.nvidia.prime = {
     amdgpuBusId = "PCI:04:0:0";
