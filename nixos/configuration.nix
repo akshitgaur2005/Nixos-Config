@@ -25,6 +25,8 @@
     ../modules/programming.nix
   ];
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   nixpkgs = {
     # You can add overlays here
     overlays = [

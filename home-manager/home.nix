@@ -68,6 +68,7 @@
       ll = "ls -l";
       update = "sudo nixos-rebuild switch --flake /home/akshit/nixos";
       dl-shell = "nix develop ~/nixos/shells/dl --impure -c zsh";
+      silly = "nix develop ~/nixos/shells/silly --impure -c zsh";
     };
 
     history.size = 10000;

@@ -11,5 +11,6 @@
     nerdfonts
     tree
     discord
+    cloudflare-warp
   ];
 }

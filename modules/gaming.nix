@@ -13,5 +13,6 @@
     gamemode
     gamescope
     mangohud
+    wineWowPackages.stable
   ];
 }
