@@ -1,5 +1,8 @@
 { inputs, config, lib, pkgs, ... }:
 {
+  imports = [
+    ./network.nix
+  ];
   environment.systemPackages = with pkgs; [
     neovim
     floorp
