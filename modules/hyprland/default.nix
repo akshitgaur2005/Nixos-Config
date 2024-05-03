@@ -1,9 +1,21 @@
 { lib, config, pkgs, ... }:
 {
+  imports = [
+    ./waybar.nix
+  ]; 
   wayland.windowManager.hyprland.catppuccin.enable = true;
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
+
+    exec-once = [
+      "hyprctl setcursor Bibata-Modern-Ice 24 &"
+      "swww init &"
+      "sww img /home/akshit/Pictures/Wallpapers/menhera.jpg &"
+      "waybar &"
+      "mako &"
+    ];
+
     env = [
       "WLR_DRM_NO_ATOMIC, 1"
       "NIXPKGS_ALLOW_UNFREE, 1"
@@ -30,7 +42,7 @@
 
     general = {
       gaps_in = 5;
-      gaps_out = 20;
+      gaps_out = 15;
       border_size = 2;
       "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
       "col.inactive_border" = "rgba(595959aa)";

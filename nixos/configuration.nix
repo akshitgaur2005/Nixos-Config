@@ -18,7 +18,6 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
-    #./cachix.nix
     ../modules/gaming.nix
     ../modules/de.nix
     ../modules/packages.nix
@@ -94,6 +93,8 @@
       extraGroups = ["wheel" "networkmanager" ];
     };
   };
+
+  time.timeZone = lib.mkDefault "Asia/Kolkata";
 
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
