@@ -8,8 +8,6 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    catppuccin.url = "github:catppuccin/nix";
     
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -21,7 +19,6 @@
     self,
     nixpkgs,
     home-manager,
-    catppuccin,
     nixvim,
     ...
   } @ inputs: let
@@ -42,12 +39,10 @@
             home-manager.users.akshit = {
               imports = [
                 ./home-manager/home.nix
-                catppuccin.homeManagerModules.catppuccin
                 nixvim.homeManagerModules.nixvim
               ];
             };
           }
-          catppuccin.nixosModules.catppuccin
 	      ];
       };
     };

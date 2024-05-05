@@ -13,11 +13,11 @@
     pamixer
     nerdfonts
     tree
-    discord
     cloudflare-warp
     direnv
     nix-direnv
     luajitPackages.jsregexp
     obsidian
+    easyeffects
   ];
 }

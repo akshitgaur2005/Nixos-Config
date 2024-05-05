@@ -71,7 +71,7 @@
   # FIXME: Add the rest of your current configuration
 
   # TODO: Set your hostname
-  networking.hostName = "nixos";
+  networking.hostName = "windows_11";
   networking.networkmanager.enable = true;
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
@@ -109,8 +109,6 @@
   };
   programs.zsh.enable = true;
   users.users.akshit.shell = pkgs.zsh;
-
-  catppuccin.flavour = "mocha";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
