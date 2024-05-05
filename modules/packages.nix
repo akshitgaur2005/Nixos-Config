@@ -18,5 +18,6 @@
     direnv
     nix-direnv
     luajitPackages.jsregexp
+    obsidian
   ];
 }
