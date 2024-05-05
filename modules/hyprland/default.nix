@@ -3,6 +3,7 @@
   imports = [
     ./waybar.nix
   ]; 
+  wayland.windowManager.hyprland.catppuccin.enable = true;
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
