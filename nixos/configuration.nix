@@ -68,7 +68,6 @@
     auto-optimise-store = true;
   };
 
-  # FIXME: Add the rest of your current configuration
 
   # TODO: Set your hostname
   networking.hostName = "nixos";
@@ -96,6 +95,21 @@
 
   time.timeZone = lib.mkDefault "Asia/Kolkata";
 
+  i18n.defaultLocale = "en_US.UTF-8";
+  ##i18n.supportedLocales = [ 
+  #    "en_US.UTF-8" 
+  #    "ja_JP.UTF-8" 
+  #    "en_IN.UTF-8" 
+  #    "hi_IN.UTF-8" 
+  #];
+  i18n.supportedLocales = [
+      "en_US.UTF-8/UTF-8"
+      "ja_JP.UTF-8/UTF-8"
+      "en_IN/UTF-8"
+      "hi_IN/UTF-8"
+  ];
+
+
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
   services.openssh = {
@@ -109,8 +123,6 @@
   };
   programs.zsh.enable = true;
   users.users.akshit.shell = pkgs.zsh;
-
-  catppuccin.flavour = "mocha";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";

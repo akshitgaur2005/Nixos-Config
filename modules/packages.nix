@@ -19,5 +19,10 @@
     nix-direnv
     luajitPackages.jsregexp
     obsidian
+    unrar
+    qbittorrent
+    stremio
   ];
+
+  services.flatpak.enable = true;
 }
