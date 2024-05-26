@@ -22,6 +22,12 @@
     unrar
     qbittorrent
     stremio
+    keepassxc
+    mpv
+    skrooge
+    kmymoney
+    zathura
+    btop
   ];
 
   services.flatpak.enable = true;

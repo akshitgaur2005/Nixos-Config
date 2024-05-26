@@ -13,5 +13,6 @@
     lutris
     mangohud
     wineWowPackages.stable
+    protonup-qt
   ];
 }

@@ -22,6 +22,7 @@
     ../modules/de.nix
     ../modules/packages.nix
     ../modules/programming.nix
+    ../modules/sound.nix
   ];
 
   boot.supportedFilesystems = [ "ntfs" ];

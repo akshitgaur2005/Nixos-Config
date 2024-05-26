@@ -13,6 +13,8 @@
       "sww img /home/akshit/Pictures/Wallpapers/menhera.jpg &"
       "waybar &"
       "mako &"
+      "polkit-kde-authentication-agent-1 &"
+      "udiskie &"
     ];
 
     env = [
