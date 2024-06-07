@@ -31,13 +31,13 @@
           tooltip-format = "{volume}%";
         };
 
-        network = {
-          format-wifi = " ";
-          format-disconnected = "睊";
-          format-ethernet = " ";
-          tooltip = true;
-          tooltip-format = "{signalStrength}%";
-        };
+        #network = {
+        #  format-wifi = " ";
+        #  format-disconnected = "睊";
+        #  format-ethernet = " ";
+        #  tooltip = true;
+        #  tooltip-format = "{signalStrength}%";
+        #};
 
         backlight = {
           device = "intel_backlight";

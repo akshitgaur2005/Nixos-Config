@@ -1,5 +1,3 @@
-# This is your system's configuration file.
-# Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
   inputs,
   lib,
@@ -7,16 +5,10 @@
   pkgs,
   ...
 }: {
-  # You can import other NixOS modules here
   imports = [
     # If you want to use modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
     # inputs.hardware.nixosModules.common-ssd
-
-    # You can also split up your configuration and import pieces of it here:
-    # ./users.nix
-
-    # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
     ../modules/gaming.nix
     ../modules/de.nix
@@ -28,7 +20,6 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   nixpkgs = {
-    # You can add overlays here
     overlays = [
       # If you want to use overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
@@ -42,7 +33,6 @@
     ];
     # Configure your nixpkgs instance
     config = {
-      # Disable if you don't want unfree packages
       allowUnfree = true;
     };
   };
@@ -97,12 +87,6 @@
   time.timeZone = lib.mkDefault "Asia/Kolkata";
 
   i18n.defaultLocale = "en_US.UTF-8";
-  ##i18n.supportedLocales = [ 
-  #    "en_US.UTF-8" 
-  #    "ja_JP.UTF-8" 
-  #    "en_IN.UTF-8" 
-  #    "hi_IN.UTF-8" 
-  #];
   i18n.supportedLocales = [
       "en_US.UTF-8/UTF-8"
       "ja_JP.UTF-8/UTF-8"

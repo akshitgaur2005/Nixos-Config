@@ -9,11 +9,9 @@
     waybar
     mako
     xdg-desktop-portal-hyprland
-    kdePackages.polkit-kde-agent-1
-    qt5-wayland
-    qt6-wayland
-    nm-applet
+    networkmanagerapplet
     udiskie
+    kdePackages.polkit-kde-agent-1
   ];
 
   programs.hyprland.enable = true;
