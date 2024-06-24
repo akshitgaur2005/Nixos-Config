@@ -13,7 +13,6 @@
     pamixer
     nerdfonts
     tree
-    discord
     cloudflare-warp
     direnv
     nix-direnv
@@ -24,11 +23,16 @@
     stremio
     keepassxc
     mpv
-    skrooge
     kmymoney
     zathura
     btop
+    thunderbird-bin
+    appimage-run
+    xfce.thunar
+    anydesk
+    unzip
   ];
 
   services.flatpak.enable = true;
+  xdg.portal.enable = true;
 }

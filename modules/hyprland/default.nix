@@ -10,7 +10,6 @@
     exec-once = [
       "hyprctl setcursor Bibata-Modern-Ice 24 &"
       "swww init &"
-      "sww img /home/akshit/Pictures/Wallpapers/menhera.jpg &"
       "waybar &"
       "mako &"
       "polkit-kde-authentication-agent-1 &"
@@ -101,6 +100,7 @@
     bind = [
       "$mod, T, exec, kitty"
       "$mod, F, exec, floorp"
+      "$mod, E, exec, thunar"
       "$mod, Q, killactive"
       "$mod, D, exec, $menu"
       "$mod, space, togglefloating"

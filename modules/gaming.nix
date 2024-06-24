@@ -15,5 +15,6 @@
     wineWowPackages.stable
     wineWow64Packages.waylandFull
     protonup-qt
+    jdk17
   ];
 }
