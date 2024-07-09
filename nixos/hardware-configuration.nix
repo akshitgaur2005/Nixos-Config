@@ -18,6 +18,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/home/akshit/storage" = 
+    { device = "/dev/disk/by-uuid/44d8d8ec-d939-409c-93c2-22c955f5111c";
+      fsType = "ext4";
+    };
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/6CC4-5E90";
       fsType = "vfat";

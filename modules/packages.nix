@@ -31,6 +31,8 @@
     xfce.thunar
     anydesk
     unzip
+    kdePackages.ark
+    p7zip
   ];
 
   services.flatpak.enable = true;

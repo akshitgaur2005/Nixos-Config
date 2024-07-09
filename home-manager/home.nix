@@ -15,7 +15,7 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     ../modules/hyprland/default.nix
-    ../modules/neovim.nix
+    # ../modules/neovim.nix
   ];
 
   #nixpkgs = {

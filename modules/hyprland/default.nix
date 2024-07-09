@@ -26,7 +26,13 @@
       "immediate, class:^(Rocket League)$"
       "immediate, class:^(heroic)$"
     ];
-    monitor = ",preferred, auto, 1";
+    
+    monitor = "eDP-1, highres, 0x0, 1.25";
+
+    xwayland = {
+    	force_zero_scaling = true;
+    };
+    
     "$menu" = "rofi -show drun -show-icons";
 
     input = {
