@@ -8,6 +8,7 @@
   programs.waybar = {
     enable = true;
     #package = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
+    /*
     settings = {
       mainBar = {
         layer = "top";
@@ -91,4 +92,6 @@
 
   xdg.configFile."waybar/mocha.css".text =
     builtins.readFile ./confs/waybar/mocha.css;
+  */
+  };
 }

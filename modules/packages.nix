@@ -11,7 +11,6 @@
     brightnessctl
     playerctl
     pamixer
-    nerdfonts
     tree
     cloudflare-warp
     direnv
@@ -33,6 +32,18 @@
     unzip
     kdePackages.ark
     p7zip
+    lazygit
+    ripgrep
+    cowsay
+    fortune
+    syncthing
+    onlyoffice-bin
+    tor-browser
+  ];
+
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    nerd-font-patcher
   ];
 
   services.flatpak.enable = true;

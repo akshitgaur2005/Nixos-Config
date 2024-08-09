@@ -2,8 +2,10 @@
 {
   imports = [
     ./waybar.nix
+    #./theme.nix
   ]; 
   wayland.windowManager.hyprland.enable = true;
+  /*
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
 
@@ -158,4 +160,5 @@
       ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
     ];
   };
+  */
 }

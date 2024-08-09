@@ -15,7 +15,7 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     ../modules/hyprland/default.nix
-    # ../modules/neovim.nix
+    ../modules/neovim.nix
   ];
 
   #nixpkgs = {
@@ -58,30 +58,33 @@
     userEmail = "akshitgaur@proton.me";
   };
   
-  programs.zsh = {
+  programs.fish = {
     enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
+    #enableCompletion = true;
+    #autosuggestion.enable = true;
     #enableAutosuggestions = true;
-    syntaxHighlighting.enable = true;
+    #syntaxHighlighting.enable = true;
 
     shellAliases = {
       ll = "ls -l";
       update = "sudo nixos-rebuild switch --flake /home/akshit/nixos";
-      dl-shell = "nix develop ~/nixos/shells/dl --impure -c zsh";
-      silly = "nix develop ~/nixos/shells/silly --impure -c zsh";
+      #dl-shell = "nix develop ~/nixos/shells/dl --impure -c zsh";
+      silly = "nix develop ~/nixos/shells/silly --impure -c fish";
     };
 
-    history.size = 10000;
-    history.path = "${config.xdg.dataHome}/zsh/history";
+    #history.size = 10000;
+    #history.path = "${config.xdg.dataHome}/zsh/history";
     
-    oh-my-zsh = {
-      enable = true;
-      theme = "robbyrussell";
-    };
+    #oh-my-zsh = {
+    #  enable = true;
+    #  theme = "robbyrussell";
+    #};
 
-    initExtra = ''
-      eval "$(direnv hook zsh)"
+    #initExtra = ''
+    interactiveShellInit = ''
+      eval "$(direnv hook fish)"
+      eval "$(starship init fish)"
+      fortune | cowsay
     '';
   };
 

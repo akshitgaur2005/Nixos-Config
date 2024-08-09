@@ -15,9 +15,12 @@
     ../modules/packages.nix
     ../modules/programming.nix
     ../modules/sound.nix
+    #../modules/bootloader.nix
+    ../modules/services.nix
   ];
 
   boot.supportedFilesystems = [ "ntfs" ];
+  boot.loader.systemd-boot.enable = true;
 
   nixpkgs = {
     overlays = [
@@ -64,8 +67,11 @@
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
-  # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  boot.loader.systemd-boot.enable = true;
+  # Enable Bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = false;
+  services.blueman.enable = true;
+
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
@@ -106,9 +112,15 @@
       PasswordAuthentication = false;
     };
   };
-  programs.zsh.enable = true;
-  users.users.akshit.shell = pkgs.zsh;
+  #programs.zsh.enable = true;
+  #users.users.akshit.shell = pkgs.zsh;
+  
+  programs.fish.enable = true;
+  users.users.akshit.shell = pkgs.fish;
+
+
+  zramSwap.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 }
